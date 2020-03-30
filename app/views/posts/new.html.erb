@@ -1,0 +1,43 @@
+<div class="container">
+  <form action="/posts" method="post">
+    <div class="form-group mt-4">
+      <h1 class="osusume text-white bg-dark mt-5 mb-5 pl-3 ">オススメしたいゲームを入力してください</h1>
+
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="genre_id" value="1" id="genre_1">
+        <label class="form-check-label text-white bg-dark" for="genre_1">アクション</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="genre_id" value="2" id="genre_2">
+        <label class="form-check-label text-white bg-dark" for="genre_2">シューティング</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="genre_id" value="3" id="genre_3">
+        <label class="form-check-label text-white bg-dark" for="genre_3">RPG</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="genre_id" value="4" id="genre_4">
+        <label class="form-check-label text-white bg-dark" for="genre_4">シミュレーション</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="genre_id" value="5" id="genre_5">
+        <label class="form-check-label text-white bg-dark" for="genre_5">アドベンチャー</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="genre_id" value="6" id="genre_6">
+        <label class="form-check-label text-white bg-dark" for="genre_6">パズル</label>
+      </div>
+      
+
+      <input class="form-control text-white bg-dark mt-5 mb-5" type="text" name="title" id="title" placeholder="タイトルを入力してください" >
+      
+      <div class="d-inline p-2 bg-dark text-white ">
+        <label for="text">
+          <h4>オススメポイント</h4>
+        </label>
+      </div>
+      <textarea class="form-control text-white bg-dark" type="text" name="text" id="text" placeholder="ネタバレ禁止！" rows="7"></textarea>
+      <button type="submit" class="btn btn-primary  border-white my-1 bg-dark">送信</button>
+    </div>
+  </form>
+</div>
