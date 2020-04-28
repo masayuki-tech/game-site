@@ -24,6 +24,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.permit(:title, :text, :genre_id)
+    params.permit(:title, :text, :genre_id, tag_ids: [])
   end
 end
