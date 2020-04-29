@@ -5,6 +5,7 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @post.posts_tags.build
   end
 
   def create
@@ -24,6 +25,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.permit(:title, :text, :genre_id, tag_ids: [])
+    params.permit(:title, :text, :genre_id, tag_ids:[])
   end
 end
