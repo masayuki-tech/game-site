@@ -9,9 +9,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    Post.create(post_params)
+    @post = Post.new(post_params)
     # binding.pry
-    redirect_to root_path
+    if @post.save
+      redirect_to root_path, notice: "投稿しました"
+    else
+      redirect_to new_post_path, alert: "投稿できません。入力必須項目を確認してください"
+    end
   end
 
   def show

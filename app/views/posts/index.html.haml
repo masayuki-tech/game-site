@@ -1,0 +1,35 @@
+%nav.navbar.navbar-expand-lg.navbar-light.bg-light
+  %h2 GAME-SITE
+  %button.navbar-toggler{"aria-controls" => "navbarSupportedContent", "aria-expanded" => "false", "aria-label" => "Toggle navigation", "data-target" => "#navbarSupportedContent", "data-toggle" => "collapse", :type => "button"}
+    %span.navbar-toggler-icon
+  #navbarSupportedContent.collapse.navbar-collapse
+    %ul.navbar-nav.mr-auto
+      %li.nav-item.px-5.active
+        %a.nav-link{:href => "/"}
+          %h4 Home
+      %li.nav-item.mt-1
+        %a.nav-link{:href => "/posts/new"}
+          %h5 投稿する
+    = form_with(url: search_posts_path, local: true, method: :get, class: "form-inline my-2 my-lg-0") do |form|
+      = form.text_field :keyword, placeholder: "投稿を検索する", class: "form-control mr-sm-2"
+      = form.submit "検索する", class: "btn btn-outline-success my-2 my-sm-0"
+.main
+  %ul.nav.nav-tabs
+    %li.nav-item
+      .nav-link.active
+        = link_to "Action", "genre/1"
+    %li.nav-item
+      .nav-link.active
+        = link_to "Shooting", "genre/2"
+    %li.nav-item
+      .nav-link.active
+        = link_to "RPG", "genre/3"
+    %li.nav-item
+      .nav-link.active
+        = link_to "Simulation", "genre/4"
+    %li.nav-item
+      .nav-link.active
+        = link_to "Adventure", "genre/5"
+    %li.nav-item
+      .nav-link.active
+        = link_to "Puzzle", "genre/6"
