@@ -1,0 +1,14 @@
+.notifications {
+  color: #fff;
+  text-align: center;  
+  height: 30px;
+  z-index: 100;
+
+  .notice {
+    background-color: lightBlue;
+  }
+
+  .alert {
+    background-color: #F35500;
+  }
+}

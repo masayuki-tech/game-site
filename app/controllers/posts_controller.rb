@@ -5,12 +5,21 @@ class PostsController < ApplicationController
 
   def new
     @post = Post.new
+    @post.posts_tags.build
   end
 
   def create
-    Post.create(post_params)
+    flash[:success] = '写真を投稿しました'
+    flash[:danger] = '写真の投稿に失敗しました'
+    flash[:notice] = 'お知らせ'
+    flash[:aiueo] = '文字列を入力'
+    @post = Post.new(post_params)
     # binding.pry
-    redirect_to root_path
+    if @post.save
+      redirect_to root_path, success: "投稿しました"
+    else
+      redirect_to new_post_path, warning: "投稿できません。入力必須項目を確認してください"
+    end
   end
 
   def show
@@ -24,6 +33,6 @@ class PostsController < ApplicationController
 
   private
   def post_params
-    params.permit(:title, :text, :genre_id)
+    params.permit(:title, :text, :genre_id, tag_ids:[])
   end
 end

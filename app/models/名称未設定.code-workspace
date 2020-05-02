@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../../gmarket"
+		},
+		{
+			"path": "../../../chat-space"
+		}
+	],
+	"settings": {}
+}
