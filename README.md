@@ -8,8 +8,8 @@
 |genre|referennces|null: false,foreign_key:true|
 ### Association
 - belongs_to :genre
-- has_many :posts_tags
-- has_many :tags, through: :posts_tags
+- has_many :post_tags
+- has_many :tags, through: :post_tags
 
 ## genresテーブル
 |Column|Type|Options|
@@ -23,14 +23,14 @@
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- has_many :posts_tags
-- has_many :posts, through: :posts_tags
+- has_many :post_tags
+- has_many :posts, through: :post_tags
 
-## posts_tagsテーブル
+## post_tagsテーブル
 |Column|Type|Options|
 |------|----|-------|
 |post_id|integer|null: false, foreign_key: true|
-|hard_id|integer|null: false, foreign_key: true|
+|tag_id|integer|null: false, foreign_key: true|
 ### Association
 - belongs_to :post
 - belongs_to :tag
